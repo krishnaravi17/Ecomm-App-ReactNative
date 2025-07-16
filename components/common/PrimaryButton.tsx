@@ -4,10 +4,11 @@ import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 interface PrimaryButtonProps {
   title: string;
   onPress: () => void;
+  disabled?: boolean;
 }
 
-const PrimaryButton: React.FC<PrimaryButtonProps> = ({ title, onPress }) => (
-  <TouchableOpacity style={styles.button} onPress={onPress}>
+const PrimaryButton: React.FC<PrimaryButtonProps> = ({ title, onPress, disabled }) => (
+  <TouchableOpacity style={[styles.button, disabled && styles.disabled ]} onPress={onPress}>
     <Text style={styles.buttonText}>{title}</Text>
   </TouchableOpacity>
 );
@@ -26,6 +27,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontFamily: 'Montserrat-Medium' 
   },
+  disabled: { backgroundColor: '#ccc' },
 });
 
 export default PrimaryButton;

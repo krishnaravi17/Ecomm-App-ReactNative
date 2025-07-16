@@ -22,40 +22,37 @@ const HomeScreen = () => {
             'Montserrat-Regular': require('../assets/fonts/montserrat/Montserrat-Regular.ttf'),
             'Montserrat-SemiBold': require('../assets/fonts/montserrat/Montserrat-SemiBold.ttf'),
             'Montserrat-Light': require('../assets/fonts/montserrat/Montserrat-Light.ttf'),
+            'Montserrat-Medium': require('../assets/fonts/montserrat/Montserrat-Medium.ttf'),
         })
         setFontLoaded(true)
     }
 
     if (fontLoaded) {
         return (
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <Text>Ecommerce App</Text>
-                <Text></Text>
-                <Button
-                    title="Splash Screen"
-                    onPress={() => router.push('/(splash)/splash_screen')}
-                />
-                <Button
-                    title="Login Screen"
-                    onPress={() => router.push('/(auth)/login_screen')}
-                />
-                <Button
-                    title="SignUp Screen"
-                    onPress={() => router.push('/(auth)/signup_screen')}
-                />
-                <Button
-                    title="HomePage Screen"
-                    onPress={() => router.push('/(tabs)/home_screen')}
-                />
+                <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                    <Text>Ecommerce App</Text>
+                    <Text></Text>
+                    <Button
+                        title="Splash Screen"
+                        onPress={() => router.push('/(splash)/splash_screen')}
+                    />
+                    <Button
+                        title="Login Screen"
+                        onPress={() => router.push('/(auth)/login_screen')}
+                    />
+                    <Button
+                        title="SignUp Screen"
+                        onPress={() => router.push('/(auth)/signup_screen')}
+                    />
+                    <Button
+                        title="HomePage Screen"
+                        onPress={() => router.push('/(tabs)/home_screen')}
+                    />
 
 
-            </View>
+                </View>
         )
     } else return <ActivityIndicator size="small" color={colors.black} />
-
-
-
-        ;
 };
 
 export default HomeScreen;

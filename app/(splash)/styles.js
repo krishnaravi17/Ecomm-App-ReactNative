@@ -99,14 +99,14 @@ const styles = StyleSheet.create({
     nextText: {
         fontSize: scale(18),
         fontWeight: '700',
-        fontFamily: 'Montserrat-Bold',
+        fontFamily: 'Montserrat-Medium',
         color: colors.redLight,
         marginBottom: 0,
     },
     prevText: {
         fontSize: scale(18),
         fontWeight: '700',
-        fontFamily: 'Montserrat-Bold',
+        fontFamily: 'Montserrat-Medium',
         color: colors.darkGrayText,
         marginBottom: 0,
     },
